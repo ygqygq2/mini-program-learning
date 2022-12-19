@@ -1,6 +1,7 @@
 {
   "pages": [
-    "pages/poster",
+    "pages/render-wxml/index",
+    "pages/poster/index",
     "pages/2.3/index",
     "pages/2.2/index",
     "pages/2.1/index",
