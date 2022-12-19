@@ -1,5 +1,7 @@
 {
   "pages": [
+    "pages/poster",
+    "pages/2.3/index",
     "pages/2.2/index",
     "pages/2.1/index",
     "pages/index/index",

@@ -1,10 +1,17 @@
 {
   "setting": {
-    "compileHotReLoad": true
+    "compileHotReLoad": true,
+    "urlCheck": false
   },
   "condition": {
     "miniprogram": {
       "list": [
+        {
+          "name": "pages/poster/index",
+          "pathName": "pages/poster/index",
+          "query": "",
+          "scene": null
+        },
         {
           "name": "pages/2.1/index",
           "pathName": "pages/2.1/index",
@@ -14,6 +21,12 @@
         {
           "name": "pages/2.2/index",
           "pathName": "pages/2.2/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/2.3/index",
+          "pathName": "pages/2.3/index",
           "query": "",
           "scene": null
         },
