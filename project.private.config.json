@@ -7,6 +7,12 @@
     "miniprogram": {
       "list": [
         {
+          "name": "pages/scrollLongList/index",
+          "pathName": "pages/scrollLongList/index",
+          "query": "",
+          "scene": null
+        },
+        {
           "name": "pages/render-wxml/index",
           "pathName": "pages/render-wxml/index",
           "query": "",
