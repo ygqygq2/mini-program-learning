@@ -1,39 +1,7 @@
 Page({
   data: {
-    list: [{
-      id: 0,
-      name: '美国'
-    },
-    {
-      id: 1,
-      name: '中国'
-    },
-    {
-      id: 2,
-      name: '巴西'
-    },
-    {
-      id: 3,
-      name: '日本'
-    }
-    ],
-    content: [{
-      id: 0,
-      name: '美国'
-    },
-    {
-      id: 1,
-      name: '中国'
-    },
-    {
-      id: 2,
-      name: '巴西'
-    },
-    {
-      id: 3,
-      name: '日本'
-    }
-    ],
+    list: ["奶茶", "奶茶", "奶茶", "奶茶", "奶茶", "奶茶", "奶茶", "奶茶", "奶茶", "奶茶", "奶茶", "奶茶", "奶茶", "奶茶", "奶茶", "奶茶", "奶茶", "奶茶", "奶茶", "奶茶", "奶茶", "奶茶", "奶茶", "奶茶", "奶茶", "奶茶", "奶茶", "奶茶", "奶茶", "奶茶", "奶茶", "奶茶", "奶茶", "奶茶", "奶茶", "奶茶", "奶茶", "奶茶", "奶茶", "奶茶", "奶茶", "奶茶", "奶茶", "奶茶", "奶茶", "奶茶", "奶茶", "奶茶", "奶茶", "奶茶", "奶茶", "奶茶", "奶茶", "奶茶", "奶茶", "奶茶", "奶茶", "奶茶", "奶茶", "奶茶", "奶茶", "奶茶", "奶茶", "奶茶", "奶茶", "奶茶", "奶茶", "奶茶", "奶茶", "奶茶", "奶茶", "奶茶"],
+    content: ["珍珠奶茶", "鲜百香双响炮", "奶茶三兄弟", "珍珠奶茶", "鲜百香双响炮", "奶茶三兄弟", "珍珠奶茶", "鲜百香双响炮", "奶茶三兄弟", "珍珠奶茶", "鲜百香双响炮", "奶茶三兄弟", "珍珠奶茶", "鲜百香双响炮", "奶茶三兄弟", "珍珠奶茶", "鲜百香双响炮", "奶茶三兄弟", "珍珠奶茶", "鲜百香双响炮", "奶茶三兄弟", "珍珠奶茶", "鲜百香双响炮", "奶茶三兄弟", "珍珠奶茶", "鲜百香双响炮", "奶茶三兄弟", "珍珠奶茶", "鲜百香双响炮", "奶茶三兄弟", "珍珠奶茶", "鲜百香双响炮", "奶茶三兄弟", "珍珠奶茶", "鲜百香双响炮", "奶茶三兄弟", "珍珠奶茶", "鲜百香双响炮", "奶茶三兄弟", "珍珠奶茶", "鲜百香双响炮", "奶茶三兄弟", "珍珠奶茶", "鲜百香双响炮", "奶茶三兄弟", "珍珠奶茶", "鲜百香双响炮", "奶茶三兄弟", "珍珠奶茶", "鲜百香双响炮", "奶茶三兄弟", "珍珠奶茶", "鲜百香双响炮", "奶茶三兄弟", "珍珠奶茶", "鲜百香双响炮", "奶茶三兄弟", "珍珠奶茶", "鲜百香双响炮", "奶茶三兄弟", "珍珠奶茶", "鲜百香双响炮", "奶茶三兄弟", "珍珠奶茶", "鲜百香双响炮", "奶茶三兄弟", "珍珠奶茶", "鲜百香双响炮", "奶茶三兄弟", "珍珠奶茶", "鲜百香双响炮", "奶茶三兄弟",],
   },
   onLoad(options) {
 
@@ -42,7 +10,6 @@ Page({
 
   },
   onShow() {
-
   },
   onHide() {
 
@@ -59,19 +26,20 @@ Page({
   menuListOnClick: function (e) {
     let me = this;
     me.setData({
-      activeViewId: e.target.id,
-      currentIndex: e.target.dataset.index
+      currentIndex: e.target.dataset.id,
+      activeViewId: "content" + e.currentTarget.dataset.id
     })
   },
 
-  // 滚动时触发， 计算当前滚动到的位置对应的菜单是哪个
+  // 滚动时触发， 计算当前滚动到的位置对应的菜单是哪个-
   scrollFunc: function (e) {
     this.setData({
       scrollTop: e.detail.scrollTop
     })
-    for (let i = 0; i < this.data.heightList.length; i++) {
-      let height1 = this.data.heightList[i];
-      let height2 = this.data.heightList[i + 1];
+    for (let i = 0; i < this.data.content.length; i++) {
+      const everyHeight = e.detail.scrollHeight / this.data.content.length
+      let height1 = everyHeight * i;
+      let height2 = (i + 1) * everyHeight;
       if (!height2 || (this.data.scrollTop >= height1 && this.data.scrollTop < height2)) {
         this.setData({
           currentIndex: i
@@ -80,7 +48,18 @@ Page({
       }
     }
     this.setData({
-      currentIdex: 0
+      currentIndex: 0
     })
+  },
+  // 获取每个菜单对应的高度
+  getHeight: function (e) {
+    let id = e.target.dataset.id;
+    let height = e.detail.height;
+    let content = this.data.content;
+    content[id] = height;
+    this.setData({
+      content: content
+    })
+    console.log(content)
   }
 })

@@ -1,22 +1,10 @@
-<view>滚动长列表</view>
-<view class="box">
-  <!-- 左侧菜单 -->
-  <scroll-view scroll-y="{{ true }}" class="nav">
-    <view
-      wx:for="{{ list}} "
-      wx:key="id"
-      id="nav-{{ item.id }}"
-      class="nav-list {{ currentIndex == index ? 'active' : '' }}"
-      bindtap="menuListOnClick"
-      data-index="{{ index }}"
-    >
-    {{ item.name }}
-    </view>
-  </scroll-view>
-  <!-- 右侧内容 -->
-  <scroll-view class="content" scroll-y="{{ true }}" scroll-into-view="{{ activeViewId }}" bindscroll="scrollFunc">
-    <view class="content-list" wx:for="{{ content }}" id="content-{{ item.id }}" wx:key="index">
-      <p>{{ item.name }}</p>
-    </view>
-  </scroll-view>
-</view>
+<view class="title">滚动长列表</view>
+<!-- 左侧菜单 -->
+<scroll-view class="scroll" scroll-y>
+  <view wx:for="{{ list }}" wx:key="index" bindtap="menuListOnClick" class="{{ currentIndex == index ? 'active' : '' }}" data-id="{{index}}">{{index}}-{{ item }}</view>
+</scroll-view>
+
+<!-- 右侧内容 -->
+<scroll-view bindscroll="scrollFunc" scroll-into-view="{{ activeViewId }}" class="content" scroll-y scroll-with-animation>
+  <view wx:for="{{ content }}" wx:key="index" id="content{{index}}">{{index}}-{{ item }}</view>
+</scroll-view>
