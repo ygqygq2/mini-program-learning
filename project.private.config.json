@@ -7,6 +7,12 @@
     "miniprogram": {
       "list": [
         {
+          "name": "pages/scrollRefresh/index",
+          "pathName": "pages/scrollRefresh/index",
+          "query": "",
+          "scene": null
+        },
+        {
           "name": "pages/scrollLongList/index",
           "pathName": "pages/scrollLongList/index",
           "query": "",

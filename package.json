@@ -9,6 +9,7 @@
     "mina-lazy-image": "^2.0.1",
     "miniprogram-recycle-view": "^0.1.5",
     "miniprogram-slide-view": "0.0.4",
+    "weui-miniprogram": "^1.2.5",
     "widget-ui": "^1.0.2",
     "wxml-to-canvas": "^1.1.1"
   },

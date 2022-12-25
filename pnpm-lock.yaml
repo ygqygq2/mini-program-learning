@@ -6,6 +6,7 @@ specifiers:
   mina-lazy-image: ^2.0.1
   miniprogram-recycle-view: ^0.1.5
   miniprogram-slide-view: 0.0.4
+  weui-miniprogram: ^1.2.5
   widget-ui: ^1.0.2
   wxml-to-canvas: ^1.1.1
 
@@ -15,6 +16,7 @@ dependencies:
   mina-lazy-image: 2.0.1
   miniprogram-recycle-view: 0.1.5
   miniprogram-slide-view: 0.0.4
+  weui-miniprogram: 1.2.5
   widget-ui: 1.0.2
   wxml-to-canvas: 1.1.1
 
@@ -42,6 +44,10 @@ packages:
 
   /miniprogram-slide-view/0.0.4:
     resolution: {integrity: sha512-OGE9a13pM297+ZzcbGFuE8QDzVgX4hZ75nPGw9yPmdjLXRMZUvEE3NA+RnRe1mQ1AnJNcf5BLRnJkEMPucYoTw==}
+    dev: false
+
+  /weui-miniprogram/1.2.5:
+    resolution: {integrity: sha512-S0YOvcDmdV10/Wy2Xv34el8LcjwLNFS3683PbNhLPlaYO+4cRQufHeeHKuk6ct3hnCwY189G+nrdZUJ30ERHhQ==}
     dev: false
 
   /widget-ui/1.0.2:

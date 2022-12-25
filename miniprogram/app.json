@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/scrollRefresh/index",
     "pages/scrollLongList/index",
     "pages/render-wxml/index",
     "pages/poster/index",
@@ -17,8 +18,7 @@
     "pages/updateRecordResult/index",
     "pages/updateRecordSuccess/index",
     "pages/sumRecord/index",
-    "pages/sumRecordResult/index",
-    "pages/scrollLongList"
+    "pages/sumRecordResult/index"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
