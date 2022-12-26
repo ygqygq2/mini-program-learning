@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/navigation-bar/index",
     "pages/vtabs/index",
     "pages/scrollRefresh/index",
     "pages/scrollLongList/index",

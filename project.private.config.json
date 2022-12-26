@@ -7,6 +7,12 @@
     "miniprogram": {
       "list": [
         {
+          "name": "pages/navigation-bar/index",
+          "pathName": "pages/navigation-bar/index",
+          "query": "",
+          "scene": null
+        },
+        {
           "name": "pages/vtabs/index",
           "pathName": "pages/vtabs/index",
           "query": "",
