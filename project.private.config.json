@@ -7,6 +7,12 @@
     "miniprogram": {
       "list": [
         {
+          "name": "pages/vtabs/index",
+          "pathName": "pages/vtabs/index",
+          "query": "",
+          "scene": null
+        },
+        {
           "name": "pages/scrollRefresh/index",
           "pathName": "pages/scrollRefresh/index",
           "query": "",

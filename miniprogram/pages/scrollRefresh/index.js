@@ -52,7 +52,7 @@ willCompleteRefresh(){
     })
     console.log(this.data.scrollIntoViewId)
   },
-  
+
   onReady: function () {
 var ctx = createRecycleContext({
   id: 'recycleId',
@@ -72,7 +72,7 @@ for (let i = 0; i < 20; i++) {
 }
 ctx.append(newList)
 
-    // 
+    //
     const arr = []
     for (let i = 0; i < 20; i++) arr.push(i)
     this.setData({
@@ -84,7 +84,7 @@ ctx.append(newList)
         triggered: true,
       })
     }, 1000)
-    // 
+    //
     let activeTab = 0, page=1, res = {something:''}
     let tabsData = this.data.tabs[activeTab] || {list:[]}
     tabsData.page = page+1
@@ -131,7 +131,6 @@ ctx.append(newList)
   },
   viewScrollToUpperEvent(e){
     console.log('测试scrolltoupper事件',e.detail);
-    
+
   }
 })
-
