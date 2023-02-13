@@ -37,7 +37,7 @@
     "useCompilerPlugins": false,
     "minifyWXML": true,
     "ignoreDevUnusedFiles": false,
-    "ignoreUploadUnusedFiles": false,
+    "ignoreUploadUnusedFiles": true,
     "packNpmManually": true,
     "packNpmRelationList": [
       {

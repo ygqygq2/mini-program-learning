@@ -20,7 +20,8 @@
     "pages/updateRecordResult/index",
     "pages/updateRecordSuccess/index",
     "pages/sumRecord/index",
-    "pages/sumRecordResult/index"
+    "pages/sumRecordResult/index",
+    "pages/canvasImg/index"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",

@@ -1,0 +1,10 @@
+<!--pages/canvasImg/index.wxml-->
+<view>
+    <view wx:if="{{canvasImg}}">
+        <image src="{{canvasImg}}" mode="widthFix" style="width:750rpx"></image>
+    </view>
+    <view style='width:0rpx;height:0rpx;overflow:hidden;'>
+        <canvas id='canvasId' type="2d" style="position:fixed;left:9999px"></canvas>
+    </view>
+</view>
+
